@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>forms</title>
+<link rel="stylesheet" href="style.css" >
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: pink;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+#animates {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+  }
+</style>
+</head>
+<body>
+<form>
+ <ul>
+ <li><a href="home.html">Home</a></li>
+  <li><a href="coffes.html">Drinks</a></li>
+  <li><a href="form.html">Contact us</a></li>
+  <li><a href="form.html">Contact us</a></li>
+  <li><a href="vlog.html">About Me</a></li>
+  <li><a  class ="active"href="formretrive.html">GAMES</a></li>
+</ul>
+</form>
+
+<h1>SOME GAMES:</h1>
+
+<script>
+
+function lighton() {
+    document.getElementById('myimage').src = "bulbon.gif";
+	var user=prompt("Hi do you want to make this bulb glow?");
+	if(user=="yes") { 
+	alert("it's good to see you ");
+	 document.getElementById('myimage').src = "bulbon.gif";
+	}
+	else {
+	 document.getElementById('myimage').src = "bulboff.gif";
+	}
+}
+function lightoff() {
+    document.getElementById('myimage').src = "bulboff.gif";
+	
+}
+</script>
+</head>
+
+
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="bulboff.gif" width="40" height="30" />
+
+<p>Click mouse and hold down!</p>
+
+<br>
+<p>
+<button onclick="myMove()">Click Me  for some action</button>
+<button onclick="myMoves()">Click Me  for some actions</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+<div id ="animates"></div>
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+function myMoves() {
+  var elem = document.getElementById("animate");   
+  var elems= document.getElementById("animates");
+  var post = 20;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (post == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.bottom = post + 'px'; 
+      elem.style.top = post + 'px'; 
+    }
+  }
+}
+</script>
+</body>
+</html>

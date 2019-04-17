@@ -1,0 +1,176 @@
+<html>
+<head>
+
+<title>FORM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<script>
+ alert ("Please enter the detais carefully:");
+
+ 
+ function validateForm() {
+    var x = document.myForm.city.selectedIndex;
+    if (x == 0) {
+        alert("city must be filled out");
+        return false;
+    }
+	var y= document.myForm.psw.value.length;
+	var myInput = document.myForm.psw.value;
+	var num = document.myForm.number.value;
+    
+	if(y<=6){
+	alert("Your password must be of 8 digits");
+	return false;
+	}
+	if (y>=10){
+	alert("Your passowrd must be of 10n digits only");
+	return false;
+	
+	}
+	
+    var passw= "@#$%^&*";
+    
+   for(i=0;i<y;i++)
+   {
+   var p=passw.indexOf(myInput.charAt(i));
+  
+   
+   if(p>=0)
+   {
+       break;
+
+   }
+   if(i==y)
+   {
+   alert("no special character found");
+   return false;
+  }
+  }
+  
+  var f=0;
+for (i=0;i<num.length;i++)
+{
+if(num.charAt(i)<'0'||num.charAt(i)>'9')
+{
+
+f=1;
+break;
+
+}
+}
+if(f==1)
+{
+alert("only digits are allowed");
+return false;
+}
+
+
+
+}
+</script>
+<body>
+<ul>
+ <li><a href="home.html">Home</a></li>
+  <li><a href="coffes.html">Drinks</a></li>
+  <li><a  class="active"href="form.html">Contact us</a></li>
+  <li><a href="vlog.html">About Me</a></li>
+   <li><a href="formretrive.html">GAMES</a></li>
+</ul>
+<body>
+<p>Enter the details:</p>
+
+<table>
+<table style="width:60%" color ="cyan">
+<form name="myForm" onsubmit="return validateForm()">
+<tr>
+<th></th>
+<th><br></th>
+</tr>
+<tr>
+<td>Name</td>
+<td><input type="text"
+name="lastname" placeholder="Enter your name" required></td>
+</tr>
+<tr>
+<td>Father name</td>
+<td><input type="text"
+name="lastname" placeholder="Enter your father's name" required></td>
+</tr>
+
+
+<tr>
+<td>Gender</td>
+<td><input type="radio"
+name="gender" value="male"
+checked>male<br>
+<input type="radio"
+name="gender" value="female">female<br>
+</tr>
+
+<tr>
+<td>E-mail</td>
+<td><input type="email"
+name="lastname" placeholder="enter a valid email" required></td>
+</tr>
+
+<tr>
+<td>date of birth</td>
+<td>Birthday(date and time):
+<input type="datetime-local" name="bdaytime" required></td>
+</tr>
+
+<tr>
+<td>Mobile no.</td>
+<td><input type="text"
+name="number" placeholder="Enter your mobile no." required></td>
+</tr>
+
+
+<tr>
+<td>City</td>
+<td><select name="city">
+<option>select city</option>
+<option value="agra">Agra</option>
+<option value="ajmer">ajmer</option>
+<option value="jaipur">jaipur</option>
+<option value="gurgaon">gurgaon</option>
+<option value="delhi">delhi</option>
+<option value="mumbai">mumbai</option>
+</select>
+<br>
+
+
+<tr>
+<td>set a password:</td>
+<td><input type="password" name="psw" placeholder="Enter a passowrd" ></td>
+</tr>
+
+<td>Select the options:</td>
+<td><input type="checkbox" name="vehicle1" value="bike">I am a coffee person</td>
+<td><input type="checkbox" name="vehicle2" value="car">I am a latte guy</td>
+<td><input type="checkbox" name="vehicle3" value="">chai hai?</td>
+</tr>
+</td>
+</table>
+<script>
+
+function fb(){
+var y=Confirm("do you want to connect via facebook");
+if (y==true){
+window.location"http//:www.facebook.com"
+}
+}
+</script>
+<input type="Submit" ><pre>
+<input type="reset">
+
+<input type ="button" value="Facebook" onclick="fb()"></button>
+
+</form>
+
+
+
+</body>
+</html>

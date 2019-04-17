@@ -1,0 +1,33 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<h1>Thisi is color changing</h1>
+<p id="para1" onmouseover="effect()" onmouseout="effectback()">This is para is color changing form bluw to white just move your cursor over it </p>
+<script>
+function alert (message){
+
+alert(message);
+
+
+}
+alertMessage("hello");
+alertMessage("welcome to my site");
+alertMessage("alerts are annoying?");
+
+function effect(){
+var x=document.getElemetById("para1");
+x.style.backgroundColor="blue";
+
+
+
+}
+function effectback(){
+var x=docume.getElemetById("para1");
+x.style.backgroundColor="white";
+}
+</script>
+</body>
+<input type="button" value="click me" onclick="alertMessage();">
+</html>

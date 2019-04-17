@@ -1,0 +1,48 @@
+﻿<html>
+ <head> 
+ <title>Starbuzz Coffee’s Mission</title>
+<link rel="stylesheet" href="style.css">
+</head>
+ <body onload="changeimg()">
+ <form>
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="coffes.html">Drinks</a></li>
+  <li><a href="form.html">Contact us</a></li>
+  <li><a href="vlog.html">About Me</a></li>
+  <li><a href="formretrive.html">GAMES</a></li>
+</ul>
+
+ </form>
+ <h1>Starbuzz Coffee’s Mission</h1> 
+ <p>To provide all the caffeine that you need to power your life.</p> 
+ <p>Just drink it.</p>
+ <a href ="coffes.html">Drinks</a><br>
+
+ <script>
+ var a=["ismixingdrin.jpg","MIU-hibiscus-tea-final-crdt-lara-ferroni.jpg","shutterstock.jpg"];
+ var c=0;
+ 
+ 
+ function changeimg()
+ {
+ 
+var y=document.getElementById("i1");
+ y.src=a[c];
+ 
+ c++;
+ if(c==2)
+ c=0;
+ setTimeout("changeimg()",5000);
+
+ 
+ }
+ 
+  </script>
+ 
+ <img src="hurricane.jpg" id="i1">
+ <img src="ismixingdrin.jpg" width="400" height="400" style="float:Bottom-right;">
+ <img src="MIU-hibiscus-tea-final-crdt-lara-ferroni.jpg" width="400" height ="400" >
+ <img src="shutterstock.jpg" width="400" height ="400" id="i1">
+ </body>
+ </html>

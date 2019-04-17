@@ -1,0 +1,49 @@
+<style type="text/css"> 
+body 
+{
+background-color:tan; 
+
+}
+img
+{
+width: 350px;
+height:350px;
+ 
+    padding: 15px;
+    border-image:url(hurricane.jpg) 30 round;
+ }
+ img {
+    border-radius: 78%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style> 
